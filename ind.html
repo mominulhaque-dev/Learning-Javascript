@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .scroll-sync {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 60px;
+      align-items: flex-start;
+    }
+
+    .scroll-sync .left {
+      position: sticky;
+      top: 100px;
+    }
+
+    .scroll-sync .left img {
+      width: 100%;
+      border-radius: 16px;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .scroll-sync .right .content-block {
+      min-height: 80vh;
+      padding: 60px 0;
+    }
+  </style>
+  <body>
+    <section class="scroll-sync">
+      <div class="left">
+        <img
+          id="stickyImage"
+          src="https://amlapuresuperc.com/cdn/shop/files/Image-2-1024x1024.png?v=1766478043&width=750"
+          alt=""
+        />
+      </div>
+
+      <div class="right">
+        <div
+          class="content-block"
+          data-image="https://amlapuresuperc.com/cdn/shop/files/Image-3-1024x1024.png?v=1766478043&width=750"
+        >
+          <h2>Empower Your Journey</h2>
+          <p>Self reflection content...</p>
+        </div>
+
+        <div
+          class="content-block"
+          data-image="https://amlapuresuperc.com/cdn/shop/files/image2_da91c36a-4c27-4e13-acbd-ca3190fb2d5e.png?v=1766515011&width=1000"
+        >
+          <h2>Build Healthy Habits</h2>
+          <p>Habit tracking content...</p>
+        </div>
+
+        <div class="content-block" data-image="image-3.jpg">
+          <h2>Daily Mindfulness</h2>
+          <p>Mindfulness content...</p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const image = document.getElementById("stickyImage");
+        const blocks = document.querySelectorAll(".content-block");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const newImg = entry.target.dataset.image;
+
+                image.style.opacity = 0;
+                setTimeout(() => {
+                  image.src = newImg;
+                  image.style.opacity = 1;
+                }, 300);
+              }
+            });
+          },
+          {
+            threshold: 0.5, // jokhon content middle e asbe
+          }
+        );
+
+        blocks.forEach((block) => observer.observe(block));
+      });
+    </script>
+  </body>
+</html>
