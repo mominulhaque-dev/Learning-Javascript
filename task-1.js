@@ -21,3 +21,13 @@ var totalShoppingCost = orangePrice + applePrice ;
 console.log("totalCost"+ totalShoppingCost);
 
 console.log("My total balance after shopping = " + (myBalance - (orangePrice + applePrice)) + "tk");
+
+//summery
+/*
+1. I have 1000 tk in my handcase.
+2. I bought orange and apple.
+3. The cost of orange is 450 tk and apple is 320 tk.
+4. Total cost of orange and apple is 770 tk.
+5. After shopping I have 230 tk in my handcase.
+
+*/
