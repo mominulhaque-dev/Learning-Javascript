@@ -5,3 +5,5 @@
 3. Learning Nested condition.
 4. Multipule operatior condtion.
 5. conditional shortcut ternary operator.
+6. Practic For of loop
+7. While loop condition
