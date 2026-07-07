@@ -49,3 +49,21 @@ ekaner vulo holo je amra workExperience er upor depend kore bonus calculate kort
 ami cacchi je amra ekta program likhi jekhane amra multiple condition check korte pari. Ekhane amra dekhte pachi je workExperience, salary er upor depend kore bonus calculate kora hoyeche.
 
 */
+
+// BMI calculator
+
+const weight = 70;
+const height = 1.2;
+
+const bmi = weight / (height * height);
+console.log(`Your BMI is: ${bmi.toFixed(2)}`);
+
+const isBMI = bmi;
+isBMI < 18.5 ? console.log("You are underweight") :
+isBMI >= 18.5 && isBMI < 24.9 ? console.log("You are normal weight") :
+isBMI >= 25 && isBMI < 29.9 ? console.log("You are overweight") :
+console.log("You are obese");
+
+/* 
+eta kibabe kaz kore: Ekhane amra BMI calculate korechi weight ebong height er upor depend kore. Tarpor amra multiple conditional operator use kore BMI er value check korechi je apni underweight, normal weight, overweight, or obese category te poren kina.
+*/
