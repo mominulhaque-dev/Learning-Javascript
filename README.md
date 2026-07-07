@@ -1,9 +1,9 @@
+**Today's Update (July 7, 2026)**
 
-### Today update(July/7/26)
-1. Recape JS.
-2. learning if else condition
-3. Learning Nested condition.
-4. Multipule operatior condtion.
-5. conditional shortcut ternary operator.
-6. Practic For of loop
-7. While loop condition
+1. Recapped JavaScript fundamentals.
+2. Learned `if...else` conditions.
+3. Learned nested conditional statements.
+4. Practiced multiple condition operators (`&&` and `||`).
+5. Learned the conditional (ternary) operator.
+6. Practiced `for...of` loops.
+7. Practiced `while` loops.
